@@ -253,7 +253,6 @@ brew list | grep sqlite     # macOS
 - Verify all source files are present
 
 ## 🚀 Future Enhancements
-
 ### Planned Features
 - 🔄 **Fund Transfers**: Between accounts and customers
 - 📱 **Mobile Banking**: Mobile-friendly interface
@@ -269,13 +268,6 @@ brew list | grep sqlite     # macOS
 - **API Integration**: External service connections
 - **Cloud Database**: Remote database support
 - **Backup System**: Automated data backups
-
-## 👥 Development Team
-
-**KNUST Computer Science Department**
-- Project Type: Academic Banking System
-- Technology Stack: C++17, SQLite3, Modern C++ Features
-- Development Approach: Object-Oriented Programming
 
 
 
