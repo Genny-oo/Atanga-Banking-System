@@ -1,12 +1,12 @@
-# 🏦 KNUST Banking System
+# 🏦 ATANGA BANKING SYSTEM
 
 **A Modern Banking Management System**  
-*Kwame Nkrumah University of Science and Technology*  
-*Computer Science Department Project*
+*By Genevieve Osei-Owusu*  
+
 
 ## 📋 Overview
 
-The KNUST Banking System is a comprehensive banking management application built in C++ with SQLite database integration. It simulates real banking operations including account management, transactions, and customer services.
+The Atanga Banking System is a comprehensive banking management application built in C++ with SQLite database integration. It simulates real banking operations including account management, transactions, and customer services.
 
 ## ✨ Features
 
@@ -45,6 +45,7 @@ KNUST-Banking-System/
 ├── 📄 Makefile                     # Build configuration
 ├── 📄 README.md                    # This file
 └── 📄 bank_system.db              # SQLite database (auto-created)
+|___📁 sqlite/                     #SQLite amalgamation
 ```
 
 ### Database Schema
@@ -87,7 +88,7 @@ KNUST-Banking-System/
 ## 🚀 Installation & Setup
 
 ### Prerequisites
-- **C++ Compiler**: GCC 7.0+ or Clang 5.0+
+- **C++ Compiler**: GCC or Clang 
 - **SQLite3**: Development libraries
 - **Make**: Build system
 
@@ -127,21 +128,15 @@ make run
 
 # Clean build files
 make clean
-
-# Debug build
-make debug
-
-# View help
-make help
 ```
 
 ### Manual Compilation
 ```bash
 # Compile all source files
-g++ -std=c++17 -Wall -Wextra -O2 main.cpp BankingSystem.cpp Database.cpp BankAccount.cpp -lsqlite3 -o banking_system
+g++ -I./sqlite/sqlite-amalgamation-3500400 src/main.cpp src/BankingSystem.cpp src/Database.cpp src/BankAccount.cpp sqlite3.o -o myprogram.exe
 
 # Run the application
-./banking_system
+.\myprogram.exe
 ```
 
 ## 🧪 Testing
@@ -149,10 +144,10 @@ g++ -std=c++17 -Wall -Wextra -O2 main.cpp BankingSystem.cpp Database.cpp BankAcc
 ### Generate Test Data
 ```bash
 # Compile test data generator
-g++ -std=c++17 test_data_generator.cpp Database.cpp -lsqlite3 -o test_generator
+g++ -std=c++17 tests/test_data_generator.cpp src/Database.cpp sqlite3.o -o test_generator.exe
 
 # Generate test data
-./test_generator
+./test_generator.exe
 ```
 
 ### Test Accounts
@@ -170,7 +165,7 @@ After running the test data generator, you can use these sample credentials:
 
 ### 1. Starting the System
 ```bash
-./banking_system
+.\myprogram.exe
 ```
 
 ### 2. Creating a New Customer
@@ -282,19 +277,7 @@ brew list | grep sqlite     # macOS
 - Technology Stack: C++17, SQLite3, Modern C++ Features
 - Development Approach: Object-Oriented Programming
 
-## 📞 Support
 
-For technical support or questions:
-- 📧 Contact your course instructor
-- 💬 Use KNUST CS department forums
-- 📚 Refer to C++ and SQLite documentation
-
-## 📄 License
-
-This project is developed for educational purposes at KNUST.  
-© 2025 KNUST Computer Science Department
-
----
 
 **🎯 Ready to start banking?**  
 Run `make run` and experience modern banking with KNUST Bank! 🏦
