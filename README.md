@@ -272,4 +272,4 @@ brew list | grep sqlite     # macOS
 
 
 **🎯 Ready to start banking?**  
-Run `make run` and experience modern banking with KNUST Bank! 🏦
+Run `make run` and experience modern banking with ATANGA Bank! 🏦
